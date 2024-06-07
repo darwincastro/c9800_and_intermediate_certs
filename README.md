@@ -25,11 +25,11 @@ c9800_and_intermediate_certs/
 │ ├── newcerts/
 │ ├── private/
 │ └── intermediate/
-│ ├── certs/
-│ ├── crl/
-│ ├── csr/
-│ ├── newcerts/
-│ └── private/
+│    ├── certs/
+│    ├── crl/
+│    ├── csr/
+│    ├── newcerts/
+│    └── private/
 └── .env
 ```
 
