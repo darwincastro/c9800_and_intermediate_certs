@@ -38,7 +38,7 @@ c9800_and_intermediate_certs/
 1. Clone the Repository
 
 ```sh
-git https://github.com/darwincastro/c9800_and_intermediate_certs.git
+git clone https://github.com/darwincastro/c9800_and_intermediate_certs.git
 cd c9800_and_intermediate_certs
 ```
 
