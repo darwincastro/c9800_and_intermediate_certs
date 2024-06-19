@@ -63,7 +63,7 @@ openssl ca -config "$ROOT_CONF" -extensions v3_intermediate_ca \
     -out $INTERMEDIATE_CA_DIR/certs/intermediate.cert.pem
 
 # Combine Subordinate Root CA and Intermediate CA into a single PEM file
-combined_ca_pem="$INTERMEDIATE_CA_DIR/certs/ca-chain.cert.pem"
+combined_ca_pem="$INTERMEDIATE_CA_DIR/certs/ca1-chain.cert.pem"
 cat $INTERMEDIATE_CA_DIR/certs/intermediate.cert.pem \
     $ROOT_CA_DIR/certs/ca.cert.pem > $combined_ca_pem
 
@@ -103,8 +103,8 @@ openssl pkcs12 -export -out "$WORKING_DIR/WLC-CA.pfx" \
     -certfile "$combined_ca_pem" \
     -passout pass:${PASS}
 
-# Copy the ca-chain.cert.pem to the working directory
-cp "$combined_ca_pem" "$WORKING_DIR/ca-chain.cert.pem"
+# Copy the ca1-chain.cert.pem to the working directory
+cp "$combined_ca_pem" "$WORKING_DIR/ca1-chain.cert.pem"
 
 # Validate the PFX bundle
 echo -e "${CYAN}Validating PFX bundle${RESET}"
